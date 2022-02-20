@@ -1,14 +1,22 @@
-import React from "react";
-import PageWrapper from "../../components/common/PageWrapper";
-import ProductLists from "../../components/ProductLists";
-
-
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import ProductList from '../../components/ProductLists';
+import { fetchProductsDataAction } from '../../store/Products/actions';
+import { getProductData } from '../../store/Products/selectors';
 
 const ProductPage: React.FC = () => {
+  const dispatch = useDispatch();
+  const data = useSelector(getProductData);
+
+  useEffect(() => {
+    dispatch(fetchProductsDataAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
-    <PageWrapper>
-        <ProductLists />
-    </PageWrapper>
+    <>
+      <ProductList data={data} />
+    </>
   );
 };
 

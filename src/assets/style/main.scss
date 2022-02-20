@@ -1,33 +1,42 @@
-@import "normalize";
-@import "variables";
+@import 'normalize';
+@import 'variables';
 
-body{
-    color: $text-color;
-    font-family: $text;
-    font-size: $text-size;
-  }
-  *{
-    box-sizing: border-box;
-  }
-  h1,h2,h3,h4,ul,li,p{
-    margin: 0;
-    padding: 0;
-  
-  }
-  h1,h2,h3,h4{
-    color: $title-color;
-    font-family: $title;
-    font-size: $title-size;
-  }
-  a {
-    color: $title-color;
-    text-decoration: none;
-  }
-  .container {
-    max-width: 1280px;
-    padding: 60px;
-  }
-  .active {
-    color: #00d4ff;
-    list-style: none;
-  }
+body {
+  color: $text-color;
+  font-family: $text;
+  font-size: $text-size;
+}
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: $title-color;
+  font-family: $title;
+  font-size: $title-size;
+}
+a {
+  color: $title-color;
+  text-decoration: none;
+}
+.container {
+  max-width: 1280px;
+  padding: 60px;
+}
+.active {
+  color: #00d4ff;
+  list-style: none;
+}
